@@ -1,0 +1,18 @@
+customer_id,customer_name,city,state,country,customer_segment,acquisition_channel
+C001,Asha,Chennai,Tamil Nadu,India,Retail,Organic
+C002,Bala,Coimbatore,Tamil Nadu,India,Retail,Organic
+C003,Charu,Madurai,Tamil Nadu,India,Retail,Organic
+C004,Dev,Chennai,Tamil Nadu,India,Retail,Organic
+C005,Esha,Salem,Tamil Nadu,India,Retail,Organic
+
+order_id,customer_id,order_date,product_id,quantity,unit_price,discount_pct,order_amount,order_status,payment_method
+O100,C001,2026-09-01,P001,2,100.00,0,200.00,Completed,Card
+O101,C002,2026-09-01,P002,3,50.00,0,150.00,Completed,Card
+O102,C003,2026-09-01,P003,1,250.00,0,250.00,Completed,Card
+O103,C004,2026-09-01,P004,1,600.00,0,600.00,Pending,Card
+
+product_id,product_name,category,unit_cost,list_price
+P001,Notebook,Stationery,40.00,100.00
+P002,Pen Set,Stationery,20.00,50.00
+P003,Bottle,Home,120.00,250.00
+P004,Desk Lamp,Home,300.00,600.00
