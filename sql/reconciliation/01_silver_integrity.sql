@@ -1,7 +1,6 @@
--- V1 Silver integrity: replace <silver_database> with the deployed database.
--- The script-defined table name is normally silver_orders.
+
 WITH s AS (
-  SELECT * FROM "<silver_database>"."silver_orders"
+  SELECT * FROM "customer_intelligence"."silver_orders"
 ), duplicate_keys AS (
   SELECT order_id FROM s GROUP BY order_id HAVING COUNT(*) > 1
 )
