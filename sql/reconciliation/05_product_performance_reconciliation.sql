@@ -2,12 +2,12 @@
 WITH silver AS (
   SELECT COUNT(DISTINCT order_id) AS orders,
          COALESCE(SUM(CAST(order_amount AS DECIMAL(38,2))), CAST(0 AS DECIMAL(38,2))) AS net_sales
-  FROM "<silver_database>"."silver_orders" WHERE order_status = 'Completed'
+  FROM "customer_intelligence"."silver_orders" WHERE order_status = 'Completed'
 ), gold AS (
   SELECT COALESCE(SUM(lifetime_orders), 0) AS orders,
          COALESCE(SUM(net_sales), CAST(0 AS DECIMAL(38,2))) AS net_sales,
          COUNT(*) AS products, COUNT(DISTINCT product_id) AS distinct_products
-  FROM "<gold_database>"."gold_product_performance"
+  FROM "customer_intelligence"."gold_product_performance"
 )
 SELECT silver.orders AS silver_orders, gold.orders AS gold_orders,
        silver.orders - gold.orders AS order_difference,
