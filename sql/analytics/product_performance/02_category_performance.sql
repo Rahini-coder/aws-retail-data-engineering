@@ -8,5 +8,5 @@ SELECT coalesce(category, 'UNKNOWN') AS category,
        sum(estimated_gross_margin) AS estimated_gross_margin,
        round(100.0 * sum(estimated_gross_margin) / nullif(sum(net_sales), 0), 2)
           AS weighted_estimated_gross_margin_pct
-FROM "<gold_database>"."gold_product_performance"
+FROM "customer_intelligence"."gold_product_performance"
 GROUP BY 1 ORDER BY net_sales DESC;
