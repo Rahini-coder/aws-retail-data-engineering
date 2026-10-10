@@ -1,8 +1,5 @@
 # ADR-001: Separate historical bootstrap from recurring incremental workflow
 
-- **Status:** Accepted — reconstructed from frozen V1 implementation (not a new design approval)
-- **Scope:** AWS Retail Data Engineering V1
-- **Evidence basis:** Source-code confirmed; deployed bootstrap execution evidence is not established in this record.
 
 ## Context and decision
 
@@ -16,9 +13,6 @@ The bootstrap initializes an empty Iceberg `silver_orders`, assigns a supplied `
 
 A one-time empty-target guard protects against accidentally replaying the bootstrap, but bootstrap is not a general-purpose upsert or backfill mechanism. Bootstrap rejected rows are appended as partitioned Parquet, unlike incremental quarantine.
 
-## Verification boundary
-
-This ADR records the existing V1 choice; it is **not** a claim that alternatives were formally evaluated in the original project or that unprovided AWS runtime evidence exists. Confirm deployed configuration and results independently before promoting them to verified evidence.
 
 ## Related project sources
 
