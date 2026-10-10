@@ -1,8 +1,8 @@
-# AWS Data Engineering Project V1 — Amazon S3 Bucket Structure
+# AWS Data Engineering Project — Amazon S3 Bucket Structure
 
 **S3 bucket:** `s3://rahini-aws-data-engineering-2026/`
 
-This document records the Amazon S3 layout for the frozen V1 data engineering project. The tree shows S3 object keys and logical prefixes; folders in S3 are prefixes rather than traditional directories.
+This document records the Amazon S3 layout for the data engineering project. The tree shows S3 object keys and logical prefixes; folders in S3 are prefixes rather than traditional directories.
 
 ```text
 s3://rahini-aws-data-engineering-2026/
@@ -51,4 +51,4 @@ s3://rahini-aws-data-engineering-2026/
 | `audit/` | Audit outputs organized by pipeline or dataset. |
 | `athena-results/` | Amazon Athena query results. |
 
-> **Scope:** This is a documentation artifact for the frozen V1 structure. It does not create S3 objects or change the deployed architecture.
+
