@@ -1,8 +1,8 @@
-# AWS Retail Data Engineering V1
+# AWS Retail Data Engineering 
 
 **A batch-oriented AWS lakehouse pipeline for retail order processing, incremental ingestion, data quality, analytics, and operational alerting.**
 
-> **Project status:** V1 architecture frozen. This repository documents the established V1 design; proposed improvements belong in a separately labeled future version. Code, screenshots, and validation evidence should be added only after verification against the implementation.
+> **Project status:** Architecture frozen. This repository documents the established design; proposed improvements belong in a separately labeled future version. Code, screenshots, and validation evidence added only after verification against the implementation.
 
 ## Architecture at a glance
 
@@ -11,7 +11,7 @@ The solution is organized into **three interacting planes**:
 | Plane | Responsibility | AWS components |
 |---|---|---|
 | **Data** | Ingest, validate, curate, and query retail data | Amazon S3, AWS Glue Crawler & Data Catalog, AWS Glue 5.1 / PySpark, Apache Iceberg, Amazon Athena |
-| **Control / orchestration** | Run the crawler, then incremental processing, then downstream Gold jobs after successful completion | AWS Glue triggers, crawler, and jobs |
+| **Control**| Run the crawler, then incremental processing, then downstream Gold jobs after successful completion | AWS Glue triggers, crawler, and jobs |
 | **Observability** | Collect execution logs and alert on selected failed job states | Amazon CloudWatch Logs, Amazon EventBridge, Amazon SNS, email |
 
 ### End-to-end data flow
@@ -97,13 +97,13 @@ These are the **S3 script names**, not a claim that their source files have alre
 | Location | Contents |
 |---|---|
 | [`docs/architecture/S3_BUCKET_STRUCTURE.md`](docs/architecture/S3_BUCKET_STRUCTURE.md) | Frozen V1 S3 prefix and object structure |
-| `docs/architecture/` | Publication-ready architecture images (to be added after review) |
-| `scripts/` | Verified Glue/PySpark source code (to be added) |
-| `sql/` | Verified Athena reconciliation and analytics queries (to be added) |
-| `orchestration/` | Glue trigger configuration and execution evidence (to be added) |
-| `monitoring/` | EventBridge/SNS configuration and sanitized log evidence (to be added) |
-| `docs/design-decisions/` | Architecture decision records and supporting rationale (to be added) |
-| `docs/validation/` | Test cases and verified results (to be added) |
+| `docs/architecture/` | Publication-ready architecture images |
+| `scripts/` | Verified Glue/PySpark source code |
+| `sql/` | Verified Athena reconciliation and analytics queries |
+| `orchestration/` | Glue trigger configuration and execution evidence  |
+| `monitoring/` | EventBridge/SNS configuration and sanitized log evidence |
+| `docs/design-decisions/` | Architecture decision records and supporting rationale  |
+| `docs/validation/` | Test cases and verified results  |
 
 ## S3 storage layout
 
@@ -116,12 +116,8 @@ The documented bucket is `s3://rahini-aws-data-engineering-2026/`. Major prefixe
 - Keep rejected records and audit evidence separate from accepted Silver data.
 - Launch the three Gold jobs only after successful completion of the incremental Silver job.
 - Separate operational logging from state-change alerting.
-- Record evidence and design decisions without retroactively altering the frozen V1 architecture.
-
-## Publication and security notes
-
-This repository is intended for technical documentation and a professional portfolio. Do **not** commit AWS access keys, secrets, customer-identifiable records, large S3 datasets, Iceberg data/metadata files, raw Athena results, or unredacted operational logs. Use small synthetic/sanitized samples and verified screenshots where appropriate.
+- Record evidence and design decisions.
 
 ---
 
-**Scope:** Documentation of AWS Data Engineering Project V1. No infrastructure is deployed or changed by this README.
+
