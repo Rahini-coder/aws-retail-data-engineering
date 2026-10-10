@@ -36,7 +36,7 @@ flowchart LR
 
 *The Data Catalog supplies metadata; Glue reads source data from S3. Historical bootstrap is a separate one-time path from the bookmark-aware incremental job.*
 
-### Control / orchestration flow
+### Control flow
 
 ```mermaid
 flowchart TD
@@ -76,7 +76,7 @@ Incremental processing includes data-quality and reference checks, version logic
 
 ## Implementation inventory
 
-The frozen V1 S3 layout includes the following named scripts:
+The S3 layout includes the following named scripts:
 
 ```text
 scripts/
@@ -90,19 +90,17 @@ scripts/
     └── gold_product_performance_v1.py
 ```
 
-These are the **S3 script names**, not a claim that their source files have already been committed to GitHub.
-
 ## Repository guide
 
 | Location | Contents |
 |---|---|
-| [`docs/architecture/S3_BUCKET_STRUCTURE.md`](docs/architecture/S3_BUCKET_STRUCTURE.md) | Frozen V1 S3 prefix and object structure |
-| `docs/architecture/` | Publication-ready architecture images |
+| [`docs/architecture/S3_BUCKET_STRUCTURE.md`](docs/architecture/S3_BUCKET_STRUCTURE.md) | S3 prefix and object structure |
+| `docs/architecture/` | architecture images |
 | `scripts/` | Verified Glue/PySpark source code |
 | `sql/` | Verified Athena reconciliation and analytics queries |
 | `orchestration/` | Glue trigger configuration and execution evidence  |
-| `monitoring/` | EventBridge/SNS configuration and sanitized log evidence |
-| `docs/design-decisions/` | Architecture decision records and supporting rationale  |
+| `monitoring/` | EventBridge/SNS configuration and log evidence |
+| `docs/design-decisions/` | Architecture decision records |
 | `docs/validation/` | Test cases and verified results  |
 
 ## S3 storage layout
