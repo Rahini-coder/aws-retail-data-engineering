@@ -1,0 +1,24 @@
+# Expected Test Scenarios (Synthetic)
+
+Assumptions: historical bootstrap succeeds first with `bootstrap_version_timestamp=2026-09-02 00:00:00`; batches are ingested separately in filename order, with correct Glue bookmark/crawler configuration and reference tables populated from the accompanying samples.
+
+| Stage | IDs | Expected behavior |
+|---|---|---|
+| Bootstrap | O100–O103 | 4 canonical Silver inserts |
+| Batch 001 | O104, O105 | INSERT (2) |
+| Batch 001 | O100 | UPDATE (1) |
+| Batch 001 | repeated O105 | superseded_in_batch_count=1; **not quarantined** |
+| Batch 001 | O106, O107, O108, O109 | DATA_QUALITY (4 rows); O108 fails DQ_006 and DQ_009 |
+| Batch 002 | O100 | STALE (1) |
+| Batch 002 | O104 | DUPLICATE (1) |
+| Batch 002 | two O110 versions | VERSION_CONFLICT (2 rows, distinct hashes at same timestamp) |
+| Batch 002 | O111 | INSERT (1) |
+| Batch 002 | O112 | DATA_QUALITY (1 row; DQ_008, and DQ_009 due negative amount) |
+| Batch 003 | O100 | UPDATE (1) |
+| Batch 003 | O111 | TARGET_VERSION_CONFLICT (1) |
+| Batch 003 | O113, O115 | INSERT (2) |
+| Batch 003 | O114 | DATA_QUALITY (1 row; DQ_010) |
+
+**Illustrative final Silver order IDs:** O100, O101, O102, O103, O104, O105, O111, O113, O115 (9 unique IDs). Actual results depend on Glue ingestion boundaries, Spark parsing, job arguments and deployment state. The pipeline does not quarantine target STALE or DUPLICATE records.
+
+
