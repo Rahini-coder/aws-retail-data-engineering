@@ -9,14 +9,16 @@ The project demonstrates how raw retail data can be transformed into curated, an
 **Key engineering capabilities:** Incremental ETL · Data Quality · Iceberg MERGE · Change Detection · Quarantine · Workflow Orchestration · Observability · SQL Analytics
 
 ---
+## Solution Architecture
 
-## 1. Solution Architecture
-
-The platform follows a layered data lakehouse architecture, separating raw source data, validated transactional data, and curated analytical datasets.
+The platform follows a layered AWS data lakehouse
+architecture, transforming raw retail data into
+validated Silver and curated Gold datasets.
 
 ![AWS Retail Data Engineering Architecture](architecture-diagrams/01-end-to-end-architecture.png)
 
-Additional architecture diagrams are available in [Architecture Diagrams](architecture-diagrams/).
+[View all architecture diagrams](architecture-diagrams/)
+
 
 ### Architecture layers
 
