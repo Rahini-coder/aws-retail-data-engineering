@@ -15,7 +15,7 @@ The platform follows a layered AWS data lakehouse
 architecture, transforming raw retail data into
 validated Silver and curated Gold datasets.
 
-![AWS Retail Data Engineering Architecture](architecture-diagrams/AWS End-to-End Data Architecture.png)
+![AWS Retail Data Engineering Architecture](architecture-diagrams/AWS%20End-to-End%20Data%20Architecture.png)
 
 [View all architecture diagrams](architecture-diagrams/)
 
