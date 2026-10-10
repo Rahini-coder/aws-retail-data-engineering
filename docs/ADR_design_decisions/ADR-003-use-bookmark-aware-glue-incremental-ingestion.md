@@ -1,8 +1,5 @@
 # ADR-003: Use bookmark-aware Glue incremental ingestion
 
-- **Status:** Accepted — reconstructed from frozen V1 implementation (not a new design approval)
-- **Scope:** AWS Retail Data Engineering V1
-- **Evidence basis:** Script confirmed; bookmark enablement owner-reported; controlled replay run evidence pending.
 
 ## Context and decision
 
@@ -16,9 +13,6 @@ The deployed Glue incremental job is owner-reported to have bookmarks enabled. T
 
 Bookmarks manage input progress but do not create a transaction with Iceberg MERGE, quarantine, or audit. Replay protection also depends on business keys, timestamps and hashes; no exactly-once claim across outputs.
 
-## Verification boundary
-
-This ADR records the existing V1 choice; it is **not** a claim that alternatives were formally evaluated in the original project or that unprovided AWS runtime evidence exists. Confirm deployed configuration and results independently before promoting them to verified evidence.
 
 ## Related project sources
 
