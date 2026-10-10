@@ -1,9 +1,5 @@
 # ADR-008: Use Glue workflow for success orchestration and EventBridge/SNS for failure alerts
 
-- **Status:** Accepted — reconstructed from frozen V1 implementation (not a new design approval)
-- **Scope:** AWS Retail Data Engineering V1
-- **Evidence basis:** Workflow and log-group screenshot evidence; failure-alert configuration is recorded architecture pending console verification.
-
 ## Context and decision
 
 Workflow `retail-data-platform-v1` gates crawler → incremental job → three parallel Gold jobs through conditional success triggers; logging and failure notification are separate concerns.
@@ -16,9 +12,6 @@ CloudWatch Logs `/aws-glue/jobs` is visible in job screenshots. The frozen failu
 
 Do not depict CloudWatch logs as a serial dependency in the workflow, or imply that SNS alerts prove downstream recovery. Exact EventBridge rule, SNS subscription, and some trigger predicates have not been screenshot-verified.
 
-## Verification boundary
-
-This ADR records the existing V1 choice; it is **not** a claim that alternatives were formally evaluated in the original project or that unprovided AWS runtime evidence exists. Confirm deployed configuration and results independently before promoting them to verified evidence.
 
 ## Related project sources
 
