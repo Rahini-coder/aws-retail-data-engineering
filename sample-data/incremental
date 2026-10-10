@@ -1,0 +1,24 @@
+order_id,customer_id,order_date,product_id,quantity,unit_price,discount_pct,order_amount,order_status,payment_method,source_updated_at
+O100,C001,2026-09-01,P001,1,100.00,0,100.00,Completed,Card,2026-09-02 10:00:00
+O104,C001,2026-09-01,P002,2,50.00,0,100.00,Completed,Card,2026-09-03 10:00:00
+O110,C002,2026-09-01,P002,1,50.00,0,50.00,Completed,Card,2026-09-04 10:00:00
+O110,C002,2026-09-01,P002,2,50.00,0,100.00,Completed,Card,2026-09-04 10:00:00
+O111,C004,2026-09-01,P004,1,600.00,0,600.00,Completed,Card,2026-09-04 10:00:00
+O112,C005,2026-09-01,P001,1,100.00,150,-50.00,Completed,Card,2026-09-04 10:00:00
+
+order_id,customer_id,order_date,product_id,quantity,unit_price,discount_pct,order_amount,order_status,payment_method,source_updated_at
+O100,C001,2026-09-01,P001,4,100.00,0,400.00,Completed,Card,2026-09-05 10:00:00
+O111,C004,2026-09-01,P004,2,600.00,0,1200.00,Completed,Card,2026-09-04 10:00:00
+O113,C005,2026-09-01,P002,2,50.00,0,100.00,Completed,Card,2026-09-05 10:00:00
+O114,C003,2026-09-01,P003,1,250.00,0,250.00,Unknown,Card,2026-09-05 10:00:00
+O115,C001,2026-09-01,P001,1,100.00,0,100.00,Completed,Card,2026-09-05 10:00:00
+
+order_id,customer_id,order_date,product_id,quantity,unit_price,discount_pct,order_amount,order_status,payment_method,source_updated_at
+O104,C001,2026-09-01,P002,2,50.00,0,100.00,Completed,Card,2026-09-03 10:00:00
+O100,C001,2026-09-01,P001,3,100.00,0,300.00,Completed,Card,2026-09-03 10:00:00
+O105,C002,2026-09-01,P003,1,250.00,0,250.00,Completed,Card,2026-09-03 10:00:00
+O105,C002,2026-09-01,P003,1,250.00,0,250.00,Completed,Card,2026-09-03 10:00:00
+O106,C999,2026-09-01,P001,2,100.00,0,200.00,Completed,Card,2026-09-03 10:00:00
+O107,C003,2026-09-01,P999,2,100.00,0,200.00,Completed,Card,2026-09-03 10:00:00
+O108,C001,2026-09-01,P001,0,100.00,0,0,Completed,Card,2026-09-03 10:00:00
+O109,C001,2026-09-01,P001,2,100.00,0,200.00,Completed,Card,
