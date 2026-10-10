@@ -5,7 +5,7 @@ WITH classified AS (
         WHEN lifetime_orders = 1 THEN 'ONE_ORDER'
         WHEN lifetime_orders BETWEEN 2 AND 4 THEN 'TWO_TO_FOUR_ORDERS'
         ELSE 'FIVE_PLUS_ORDERS' END AS purchase_segment
- FROM "<gold_database>"."gold_customer_360"
+ FROM "customer_intelligence"."gold_customer_360"
 )
 SELECT purchase_segment, count(*) AS customers,
        sum(lifetime_orders) AS completed_orders,
