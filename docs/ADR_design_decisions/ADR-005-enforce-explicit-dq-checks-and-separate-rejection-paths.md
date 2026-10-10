@@ -1,8 +1,5 @@
 # ADR-005: Enforce explicit DQ checks and separate rejection paths
 
-- **Status:** Accepted — reconstructed from frozen V1 implementation (not a new design approval)
-- **Scope:** AWS Retail Data Engineering V1
-- **Evidence basis:** Source-code confirmed; rejection counts and sample Athena evidence pending.
 
 ## Context and decision
 
@@ -16,9 +13,6 @@ Incremental categories are `DATA_QUALITY`, `VERSION_CONFLICT`, and `TARGET_VERSI
 
 Incremental superseded rows and stale/duplicate Silver candidates are counted but not quarantined. Rules do not validate amount arithmetic; null checks are not general whitespace checks. Quarantine storage formats are intentionally different in this V1.
 
-## Verification boundary
-
-This ADR records the existing V1 choice; it is **not** a claim that alternatives were formally evaluated in the original project or that unprovided AWS runtime evidence exists. Confirm deployed configuration and results independently before promoting them to verified evidence.
 
 ## Related project sources
 
