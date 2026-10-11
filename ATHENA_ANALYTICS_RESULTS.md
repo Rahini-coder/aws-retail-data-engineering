@@ -76,6 +76,43 @@ The exported result contains **20 product rows** including product category, uni
 ```markdown
 ### Verified Athena analytics
 
+## Known Findings and Limitations
+
+### Product Cost and Margin Anomaly
+
+Athena Product Performance results identified the following values for product `PROD00352`:
+
+| Metric | Value |
+|---|---:|
+| Net sales | 478,055.12 |
+| Estimated COGS | -2,285.00 |
+| Estimated gross margin | 480,340.12 |
+| Estimated gross margin percentage | 100.48% |
+
+The negative estimated COGS results in a gross margin percentage exceeding 100%.
+
+### Monthly Revenue Coverage
+
+The monthly revenue analytics returned 33 observed monthly records.
+
+- September 2026 is absent from the results.
+- October 2026 contains partial-month data.
+- Comparisons involving these periods should be interpreted cautiously.
+
+The missing month has not been established as an ETL defect.
+
+### Analytics Validation Scope
+
+Four representative Athena analytics queries were executed and their CSV results captured:
+
+1. Cross-Gold KPI reconciliation
+2. Monthly revenue trend
+3. Top customers
+4. Top products
+
+
+### V1 Implementation Status
+
 Four representative Athena queries have exported execution results covering
 cross-Gold KPI consistency, monthly revenue, top customers and top products.
 See [Athena Analytics — Execution Evidence](docs/ATHENA_ANALYTICS_EVIDENCE_V1.md).
