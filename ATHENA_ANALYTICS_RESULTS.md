@@ -9,10 +9,10 @@
 
 | Results | Repository SQL | Result file | Outcome |
 |---|---|---|---|
-| E06-A: Cross-Gold KPI snapshot | `sql/analytics/cross_domain/01_gold_kpi_snapshot.sql` | [`cross_gold_kpi_snapshot.csv`](evidence/athena/cross_gold_kpi_snapshot.csv) | Aggregate net revenue and completed-order counts match across three Gold tables |
-| E06-B: Monthly revenue trend | `sql/analytics/daily_sales/01_monthly_revenue_trend.sql` | [`monthly_revenue_trend.csv`](evidence/athena/monthly_revenue_trend.csv) | 33 observed monthly rows; revenue and order totals match KPI snapshot |
-| E06-C: Top customers | `sql/analytics/customer_360/01_top_customers.sql` | [`top_customers.csv`](evidence/athena/top_customers.csv) | 20 ranked customer rows returned |
-| E06-D: Top products | `sql/analytics/product_performance/01_top_products.sql` | [`top_products.csv`](evidence/athena/top_products.csv) | 20 ranked product rows returned; one negative estimated COGS anomaly identified |
+| E06-A: Cross-Gold KPI snapshot | `sql/analytics/cross_domain/01_gold_kpi_snapshot.sql` | [`cross_gold_kpi_snapshot.csv`](athena/results/cross_gold_kpi_snapshot.csv) | Aggregate net revenue and completed-order counts match across three Gold tables |
+| E06-B: Monthly revenue trend | `sql/analytics/daily_sales/01_monthly_revenue_trend.sql` | [`monthly_revenue_trend.csv`](athena/results/monthly_revenue_trend.csv) | 33 observed monthly rows; revenue and order totals match KPI snapshot |
+| E06-C: Top customers | `sql/analytics/customer_360/01_top_customers.sql` | [`top_customers.csv`](athena/results/top_customers.csv) | 20 ranked customer rows returned |
+| E06-D: Top products | `sql/analytics/product_performance/01_top_products.sql` | [`top_products.csv`](athena/results/top_products.csv) | 20 ranked product rows returned; one negative estimated COGS anomaly identified |
 
 
 ## E06-A — Cross-Gold KPI snapshot
