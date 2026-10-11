@@ -94,7 +94,7 @@ scripts/
 
 | Location | Contents |
 |---|---|
-| [`docs/architecture/S3_BUCKET_STRUCTURE.md`](docs/architecture/S3_BUCKET_STRUCTURE.md) | S3 prefix and object structure |
+| [`S3_BUCKET_STRUCTURE.md`](S3_BUCKET_STRUCTURE.md) | S3 prefix and object structure |
 | `docs/architecture/` | architecture images |
 | `scripts/` | Verified Glue/PySpark source code |
 | `sql/` | Verified Athena reconciliation and analytics queries |
@@ -105,7 +105,7 @@ scripts/
 
 ## S3 storage layout
 
-The documented bucket is `s3://rahini-aws-data-engineering-2026/`. Major prefixes are `raw/`, `scripts/`, `warehouse/customer_intelligence/`, `audit/`, and `athena-results/`. See the [full S3 bucket structure](docs/architecture/S3_BUCKET_STRUCTURE.md).
+The documented bucket is `s3://rahini-aws-data-engineering-2026/`. Major prefixes are `raw/`, `scripts/`, `warehouse/customer_intelligence/`, `audit/`, and `athena-results/`. See the [full S3 bucket structure](S3_BUCKET_STRUCTURE.md).
 
 ## Engineering principles
 
