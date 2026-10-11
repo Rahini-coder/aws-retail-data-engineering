@@ -71,9 +71,7 @@ The exported result contains **20 product rows** including product category, uni
 4. Export results as CSV and compare with the evidence files linked above.
 5. Record query ID, execution timestamp, and any updated outputs separately if reproducing later; refreshed data may differ.
 
-## Suggested root README link
 
-```markdown
 ### Verified Athena analytics
 
 ## Known Findings and Limitations
@@ -111,10 +109,6 @@ Four representative Athena analytics queries were executed and their CSV results
 4. Top products
 
 
-### V1 Implementation Status
 
-Four representative Athena queries have exported execution results covering
-cross-Gold KPI consistency, monthly revenue, top customers and top products.
-See [Athena Analytics — Execution Evidence](docs/ATHENA_ANALYTICS_EVIDENCE_V1.md).
-```
+
 
