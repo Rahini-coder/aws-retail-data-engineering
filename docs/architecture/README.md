@@ -90,18 +90,16 @@ scripts/
     └── gold_product_performance_v1.py
 ```
 
-## Repository guide
+## Repository Guide
 
-| Location | Contents |
+| Component | Location |
 |---|---|
-| [`S3_BUCKET_STRUCTURE.md`](S3_BUCKET_STRUCTURE.md) | S3 prefix and object structure |
-| `docs/architecture/` | architecture images |
-| `scripts/` | Verified Glue/PySpark source code |
-| `sql/` | Verified Athena reconciliation and analytics queries |
-| `orchestration/` | Glue trigger configuration and execution evidence  |
-| `monitoring/` | EventBridge/SNS configuration and log evidence |
-| `docs/design-decisions/` | Architecture decision records |
-| `athena/results` | verified results  |
+| Architecture diagrams | [Architecture Diagrams](../../architecture-diagrams/) |
+| Architecture documentation | [Architecture Documentation](./) |
+| Architecture Decision Records | [Design Decisions](../ADR_design_decisions/) |
+| Data quality documentation | [Data Quality](../data-quality/) |
+| Athena execution evidence | [Athena Results](../../athena/results/) |
+| Athena analytics documentation | [Athena Analytics Results](../../ATHENA_ANALYTICS_RESULTS.md) |
 
 ## S3 storage layout
 
