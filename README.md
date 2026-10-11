@@ -183,6 +183,15 @@ The repository includes SQL for:
 
 See [SQL Queries](sql/).
 
+### Athena Execution Evidence
+
+Four representative Athena analytics queries have captured CSV results,
+covering cross-Gold reconciliation, monthly revenue, top customers,
+and top products.
+
+[View Athena Analytics Results](ATHENA_ANALYTICS_RESULTS.md)
+
+[Browse Athena CSV Evidence](athena/results/)
 ---
 
 ## 8. Technology Stack
