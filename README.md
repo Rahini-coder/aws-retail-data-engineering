@@ -223,7 +223,7 @@ The project documents significant engineering decisions through Architecture Dec
 
 These records explain the rationale behind the selected processing patterns, data storage approaches, quality controls, and operational design.
 
-See [Design Decisions](docs/design-decisions/).
+See [Architecture Decision Records](docs/ADR_design_decisions/)
 
 ---
 
