@@ -101,7 +101,7 @@ scripts/
 | `orchestration/` | Glue trigger configuration and execution evidence  |
 | `monitoring/` | EventBridge/SNS configuration and log evidence |
 | `docs/design-decisions/` | Architecture decision records |
-| `docs/validation/` | Test cases and verified results  |
+| `athena/results` | verified results  |
 
 ## S3 storage layout
 
